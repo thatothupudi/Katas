@@ -1,16 +1,12 @@
-def Combination():
-    list1 = []
-    list2 = []
-    sequence1 = input("Enter your your sequence ").split(" ")
-    list1 = sequence1
-    
-    sequence2 = input("Enter your your sequence ").split(" ")
-    list2 = sequence2
-    
-    t = len(list1)
+def Combination(sequence1=[], sequence2=[]):
+    num = len(sequence1)
     store_list = []
-    for s in range(t):
-        store_list.append(list1[s])
-        store_list.append(list2[s])
-    print(store_list)
-Combination() 
+    for row in range(num):
+        store_list.append(sequence1[row])
+        store_list.append(sequence2[row])
+    
+    return store_list
+
+combined_list = Combination([11,22,33],  [1,2,3])
+print(combined_list)
+    
